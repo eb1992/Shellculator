@@ -58,9 +58,9 @@ You can use previously calculated results by referring to their letters:
 ```
 
 #### Commands
-`help`  - Shows usage information
-`quit`  - Quit the calculator
-`q`     - Quit the calculator
+- `help`  - Shows usage information
+- `quit`  - Quit the calculator
+- `q`     - Quit the calculator
 
 #### Note
 - The calculator automatically assigns results to letters starting from 'a'.
