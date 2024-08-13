@@ -63,17 +63,19 @@ If this directory is not on your PATH you can:
     echo $PATH
     ```
 
-2. **Make executable accessible on PATH**
-    Move executable to any directory on PATH.
+2. **Move executable to any directory on PATH**
+
     ```sh
     mv ~/.local/bin/shellculator /usr/local/bin
 
     ```
+
     Any other directory on PATH is valid here:
 
     ```sh
     mv ~/.local/bin/shellculator </any/directory/on/PATH/bin>
     ```
+
 If the build fails in the linking stage the problem can be that Shellculator uses `haskeline` which has a (implicit?) dependency on `libtinfo-dev`, a part of `ncurses`.
 
 To fix on Debian-bases systems install:
