@@ -1,9 +1,14 @@
 # Shellculator Description
-Shellculator is a simple command-line calculator that allows you to perform calculations using basic arithmetic operations and mathematical constants. Results are automatically assigned to letters, which you can reference in subsequent calculations. Ideal for quick, interactive calculations directly in your shell.
+Shellculator is a simple command-line calculator that allows you to perform calculations using basic arithmetic operations and mathematical constants. Results are automatically assigned to letters, which you can reference in subsequent calculations. Ideal for quick, interactive calculations directly in your shell. The calculator is written in Haskell using monadic parser combinators.
 
 ## Installation (Linux)
 
 To compile and install the program:
+
+0. **Make sure stack is installed:**
+
+    This project is easiest built with [Stack](https://docs.haskellstack.org/en/stable/).
+    The easiest way to manage Haskell installations, including Stack, is to use [GHCup](https://www.haskell.org/ghcup/).
 
 1. **Compile the program:**
 
