@@ -11,7 +11,7 @@ main :: IO ()
 main = runInputT defaultSettings $ do
   outputStrLn $
     unlines
-      [ "shellculator 0.1.0.0",
+      [ "Shellculator 1.0.0",
         "==================================",
         "For usage information enter 'help'"
       ]
