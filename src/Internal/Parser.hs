@@ -69,10 +69,8 @@ doubleP =
   read <$> do
     whole <- some digitP
     fractional <-
-      ( do
-          dot <- charP '.'
-          fraction <- some digitP
-          return (dot : fraction)
+      ( (charP '.' <|> charP ',')
+          >> ('.' :) <$> some digitP
         )
         <|> return ""
     return $ whole ++ fractional

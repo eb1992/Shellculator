@@ -6,9 +6,8 @@ import Data.Char (chr, isAscii, isAsciiLower, isAsciiUpper, ord, toUpper)
 import ExprParser (eval)
 import Internal.Parser (charP, run)
 import Numeric (showFFloat)
-import Test.Hspec(hspec, describe, context, it, shouldBe)
-import Test.QuickCheck(Testable (property), forAll, vectorOf, Arbitrary (arbitrary), suchThat)
-
+import Test.Hspec (context, describe, hspec, it, shouldBe)
+import Test.QuickCheck (Arbitrary (arbitrary), Testable (property), forAll, suchThat, vectorOf)
 
 showFloat :: Double -> String
 showFloat d = showFFloat Nothing d ""
@@ -148,3 +147,8 @@ main = hspec $ do
     context "unbalanced parentheses" $ do
       it "1 + 2)" $ do
         eval "1 + 2)" `shouldBe` Nothing
+
+    context "comma instead of dot" $ do
+      it "a,b" $ property $ \n ->
+        let (a, b) = span (/= '.') (showFloat n)
+         in eval (a ++ "," ++ tail b) == Just n
