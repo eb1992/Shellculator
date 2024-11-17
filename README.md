@@ -78,17 +78,17 @@ If this directory is not on your PATH you can:
 
 If the build fails in the linking stage the problem can be that Shellculator uses `haskeline` which has a (implicit?) dependency on `libtinfo-dev`, a part of `ncurses`.
 
-To fix on Debian-bases systems install:
+To fix on Debian-based systems install:
 ```sh
 sudo apt install libtinfo-dev
 ```
 
-For Fedora-base systems:
+For Fedora-based systems:
 ```sh
 sudo dnf install ncurses-devel
 ```
 
-For Arch-base systems:
+For Arch-based systems:
 ```sh
 sudo pacman -S ncurses
 ```
