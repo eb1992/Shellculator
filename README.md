@@ -76,7 +76,7 @@ If this directory is not on your PATH you can:
     mv ~/.local/bin/shellculator </any/directory/on/PATH/bin>
     ```
 
-If the build fails in the linking stage the problem can be that Shellculator uses `haskeline` which has a (implicit?) dependency on `libtinfo-dev`, a part of `ncurses`.
+If the build fails in the linking stage the problem can be that Shellculator uses `haskeline` which has a dependency on `libtinfo-dev`, a part of `ncurses`.
 
 To fix on Debian-based systems install:
 ```sh
