@@ -151,4 +151,4 @@ main = hspec $ do
     context "comma instead of dot" $ do
       it "a,b" $ property $ \n ->
         let (a, b) = span (/= '.') (showFloat n)
-         in eval (a ++ "," ++ tail b) == Just n
+         in eval (a ++ "," ++ drop 1 b) == Just n
